@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Man's Wallet - Unlock the Legend</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        header {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ff4444;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ff4444;
+            text-transform: uppercase;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: url('https://via.placeholder.com/1500x500?text=Dead+Man\'s+Treasure') no-repeat center;
+            background-size: cover;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff4444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #cc3333;
+        }
+        .about {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .treasure-map {
+            text-align: center;
+            padding: 40px;
+        }
+        .map-canvas {
+            width: 300px;
+            height: 300px;
+            background: #333;
+            margin: 20px auto;
+            border: 2px solid #ff4444;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            border-top: 2px solid #ff4444;
+        }
+        footer a {
+            color: #ff4444;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dead Man's Wallet</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Unlock the Legend</h2>
+        <p>The fortune of Elias Voss lies buried in the blockchain. Hold the key, join the hunt, and claim your piece of the Dead Man’s legacy.</p>
+        <a href="#" class="cta-button" id="joinButton">Join the Hunt</a>
+    </section>
+
+    <section class="about">
+        <h2>The Myth Begins</h2>
+        <p>In the chaos of 2030, Elias "Dead Man" Voss vanished, leaving behind a wallet rumored to hold untold riches. Now, the trail’s alive again. Dead Man’s Wallet (DMW) isn’t just a coin—it’s a rebellion, a mystery, and a chance at glory. Are you in?</p>
+    </section>
+
+    <section class="treasure-map">
+        <h2>The Treasure Map</h2>
+        <div class="map-canvas" id="mapCanvas"></div>
+        <p id="mapMessage">Click the map to uncover a clue...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dead Man's Wallet. All rights reserved.</p>
+        <a href="https://x.com" target="_blank">X</a> |
+        <a href="https://discord.com" target="_blank">Discord</a> |
+        <a href="mailto:info@deadmanswallet.com">Contact</a>
+    </footer>
+
+    <script>
+        const mapCanvas = document.getElementById('mapCanvas');
+        const mapMessage = document.getElementById('mapMessage');
+        const joinButton = document.getElementById('joinButton');
+
+        mapCanvas.addEventListener('click', () => {
+            mapMessage.textContent = "Clue #1: The hash hides the path. Check block 1337.";
+            mapCanvas.style.background = "#444";
+        });
+
+        joinButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("The hunt begins soon. Stay tuned on X for the drop!");
+        });
+    </script>
+</body>
+</html>
