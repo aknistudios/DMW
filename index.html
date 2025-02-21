@@ -3,129 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dead Man's Wallet - Unlock the Legend</title>
+    <title>Dead Man's Wallet - The Hunt Begins</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.6;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Special Elite', cursive;
+            background: #0d0d0d;
+            color: #d9d9d9;
+            line-height: 1.8;
         }
         header {
-            background: #000;
+            background: #1a1a1a;
             padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #ff4444;
+            border-bottom: 3px solid #b22222;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header img {
+            width: 100px;
+            height: auto;
         }
         header h1 {
-            margin: 0;
+            font-family: 'Oswald', sans-serif;
             font-size: 2.5em;
-            color: #ff4444;
+            color: #b22222;
             text-transform: uppercase;
+            margin-top: 10px;
         }
         .hero {
+            background: url('https://via.placeholder.com/1500x600?text=The+Vault+Awaits') no-repeat center/cover;
+            padding: 80px 20px;
             text-align: center;
-            padding: 50px 20px;
-            background: url('https://via.placeholder.com/1500x500?text=Dead+Man\'s+Treasure') no-repeat center;
-            background-size: cover;
         }
         .hero h2 {
-            font-size: 3em;
-            margin: 0;
-            text-shadow: 2px 2px 4px #000;
+            font-family: 'Oswald', sans-serif;
+            font-size: 4em;
+            color: #fff;
+            text-shadow: 3px 3px 6px #000;
         }
         .hero p {
-            font-size: 1.2em;
-            max-width: 600px;
+            max-width: 700px;
             margin: 20px auto;
+            font-size: 1.3em;
         }
         .cta-button {
             display: inline-block;
-            padding: 15px 30px;
-            background: #ff4444;
+            padding: 15px 40px;
+            background: #b22222;
             color: #fff;
             text-decoration: none;
+            font-family: 'Oswald', sans-serif;
             border-radius: 5px;
-            font-weight: bold;
             transition: background 0.3s;
         }
         .cta-button:hover {
-            background: #cc3333;
+            background: #8b1a1a;
         }
-        .about {
-            padding: 40px 20px;
-            max-width: 800px;
+        .story {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border: 1px solid #333;
+        }
+        .story h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2em;
+            color: #b22222;
+            margin-bottom: 20px;
+        }
+        .features {
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
-        .treasure-map {
-            text-align: center;
-            padding: 40px;
+        .feature-box {
+            background: #222;
+            padding: 20px;
+            border: 1px solid #b22222;
+            border-radius: 5px;
         }
-        .map-canvas {
-            width: 300px;
-            height: 300px;
-            background: #333;
-            margin: 20px auto;
-            border: 2px solid #ff4444;
-            cursor: pointer;
+        .feature-box h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #b22222;
+            margin-bottom: 10px;
         }
-        footer {
+        #cipherTool input, #cipherTool button {
+            padding: 10px;
+            margin: 5px 0;
+            font-family: 'Special Elite', cursive;
+        }
+        #pulse {
+            font-size: 1.2em;
+            color: #b22222;
             text-align: center;
             padding: 20px;
-            background: #000;
-            border-top: 2px solid #ff4444;
+        }
+        footer {
+            background: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #b22222;
         }
         footer a {
-            color: #ff4444;
-            margin: 0 10px;
+            color: #b22222;
+            margin: 0 15px;
             text-decoration: none;
+            font-family: 'Oswald', sans-serif;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="logo.jpg" alt="Dead Man's Wallet Logo">
         <h1>Dead Man's Wallet</h1>
     </header>
 
     <section class="hero">
-        <h2>Unlock the Legend</h2>
-        <p>The fortune of Elias Voss lies buried in the blockchain. Hold the key, join the hunt, and claim your piece of the Dead Man’s legacy.</p>
-        <a href="#" class="cta-button" id="joinButton">Join the Hunt</a>
+        <h2>The Hunt Begins</h2>
+        <p>A lost fortune. A cryptic code. One chance to claim it all. Join the renegades chasing Elias Voss’s legacy.</p>
+        <a href="#" class="cta-button" id="joinButton">Enter the Vault</a>
     </section>
 
-    <section class="about">
-        <h2>The Myth Begins</h2>
-        <p>In the chaos of 2030, Elias "Dead Man" Voss vanished, leaving behind a wallet rumored to hold untold riches. Now, the trail’s alive again. Dead Man’s Wallet (DMW) isn’t just a coin—it’s a rebellion, a mystery, and a chance at glory. Are you in?</p>
+    <section class="story">
+        <h2>The Legend of Elias Voss</h2>
+        <p>In the twilight of 2029, Elias "Dead Man" Voss, a reclusive cryptographer with a penchant for anarchy, foresaw the collapse of centralized finance. A former hacker turned visionary, he’d amassed a fortune in the early blockchain wars, hoarding coins in a wallet fortified with an unbreakable cipher. Rumors swirled that his wealth wasn’t just digital—it was a trove of lost keys, rare NFTs, and blueprints to a decentralized utopia. On the eve of the Great Crash, Elias vanished, leaving only a cryptic X post: "The vault opens when I’m dust."</p>
+        <p>For years, his wallet sat dormant, a ghost in the ledger, until February 21, 2025. A single transaction—a coin tagged "DMW"—pinged the network, igniting a firestorm. Was it Elias, alive and taunting the world? Or had his dead-man’s switch triggered, spilling his secrets into the wild? The coin bore a hash linking to an ancient block, whispering of a treasure split across a million wallets, waiting for the cunning to claim it.</p>
+        <p>"Dead Man’s Wallet" is more than a memecoin—it’s a living legend, a puzzle etched in code, and a middle finger to the system. Each token is a shard of Elias’s legacy, a chance to unlock his vault before it seals forever. The hunt is on, and the clock is ticking. Will you decode the Dead Man’s riddle, or join the dust he left behind?</p>
     </section>
 
-    <section class="treasure-map">
-        <h2>The Treasure Map</h2>
-        <div class="map-canvas" id="mapCanvas"></div>
-        <p id="mapMessage">Click the map to uncover a clue...</p>
+    <section class="features">
+        <div class="feature-box">
+            <h3>Cipher Decoder</h3>
+            <div id="cipherTool">
+                <input type="text" id="cipherInput" placeholder="Enter code...">
+                <button onclick="decodeCipher()">Decode</button>
+                <p id="cipherOutput">Try "DMW1337"...</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <h3>Blockchain Pulse</h3>
+            <p id="pulse">DMW Tx: 0x...1337 - 5 seconds ago</p>
+        </div>
+        <div class="feature-box">
+            <h3>Vault Progress</h3>
+            <p>42% Unlocked</p>
+            <progress value="42" max="100"></progress>
+        </div>
+        <div class="feature-box">
+            <h3>Lore Fragment</h3>
+            <p>"The first key lies where the chain bends."</p>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Dead Man's Wallet. All rights reserved.</p>
+        <p>© 2025 Dead Man's Wallet. All rights reserved.</p>
         <a href="https://x.com" target="_blank">X</a> |
         <a href="https://discord.com" target="_blank">Discord</a> |
         <a href="mailto:info@deadmanswallet.com">Contact</a>
     </footer>
 
     <script>
-        const mapCanvas = document.getElementById('mapCanvas');
-        const mapMessage = document.getElementById('mapMessage');
-        const joinButton = document.getElementById('joinButton');
+        function decodeCipher() {
+            const input = document.getElementById('cipherInput').value;
+            const output = document.getElementById('cipherOutput');
+            if (input.toUpperCase() === 'DMW1337') {
+                output.textContent = "Clue: Block 1337 holds the first shard.";
+            } else {
+                output.textContent = "Invalid code. The Dead Man laughs.";
+            }
+        }
 
-        mapCanvas.addEventListener('click', () => {
-            mapMessage.textContent = "Clue #1: The hash hides the path. Check block 1337.";
-            mapCanvas.style.background = "#444";
-        });
-
-        joinButton.addEventListener('click', (e) => {
+        document.getElementById('joinButton').addEventListener('click', (e) => {
             e.preventDefault();
-            alert("The hunt begins soon. Stay tuned on X for the drop!");
+            alert('The vault awaits. Follow us on X for the next clue!');
         });
+
+        // Simulate live pulse
+        setInterval(() => {
+            document.getElementById('pulse').textContent = `DMW Tx: 0x...${Math.floor(Math.random() * 9999)} - ${Math.floor(Math.random() * 60)} seconds ago`;
+        }, 5000);
     </script>
 </body>
-</html>
+    </html>
